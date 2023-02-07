@@ -2,7 +2,7 @@
 # Initialize the hours and minutes variables                                                                 
 hour=0                                                                                                       
 minute=1
-echo "Hours : $hour"
+	echo "Hours : $hour"
 while [ $hour -lt 13 ]
 do
 	echo "$hour"
