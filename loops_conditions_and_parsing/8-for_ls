@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
-# Get the names of all non-hidden files in the current directory
-files=$(ls | grep -v "^\.") 
-# Loop through each file and display the part of the name after the first dash
-for file in $files
-do
-  # Get the part of the name after the last dash
-	name=$(echo "$file" | rev | cut -d "-" -f 1 | rev)
-  # Display the name in a list format
-  echo "$name"
+#  script that displays The content of the current directory, In a list format and Where only the part of the name after the first dash is displayed
+list=$(ls)
+for i in $list; do
+	echo "$i" | cut -d '-' -f2
 done
