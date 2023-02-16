@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-# process and pid file
-file="/var/run/myscript.pid"
-echo $$ > "$file"
-trap 'echo "I hate the kill command"; rm "$file"; exit' SIGTERM SIGQUIT
-trap 'echo Y U no love me?!' SIGINT
-while :; do
-	echo "To infinity and beyond"
-	sleep 2
+# Indefinitely writes I am alive! to the file /tmp/my_process
+# In between every I am alive! message, the program should pause for 2 seconds
+a=1
+while [ $a -ge 1 ]
+do
+echo "I am alive!" >> /tmp/my_process
+sleep 2
 done
